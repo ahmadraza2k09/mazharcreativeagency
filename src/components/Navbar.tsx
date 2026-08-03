@@ -41,22 +41,16 @@ export default function Navbar() {
         <a href="#" className="flex items-center gap-2 sm:gap-3 min-w-0" style={{ textDecoration: 'none' }}>
           <img
             src="/assets/images/download.png"
-            alt="Mazhar Creative Agency"
+            alt="MCA"
             className="logo-blend"
             style={{ width: '36px', height: '36px', objectFit: 'contain', flexShrink: 0 }}
           />
           <div style={{ lineHeight: 1 }} className="flex-shrink-0">
             <div
               className="font-display whitespace-nowrap"
-              style={{ fontSize: 'clamp(1rem, 4.4vw, 1.18rem)', color: '#1c1a16', letterSpacing: '0.02em', fontWeight: 600 }}
+              style={{ fontSize: 'clamp(1.1rem, 4.4vw, 1.35rem)', color: '#1c1a16', letterSpacing: '0.05em', fontWeight: 700 }}
             >
-              Mazhar
-            </div>
-            <div
-              className="font-label whitespace-nowrap"
-              style={{ fontSize: 'clamp(0.46rem, 1.9vw, 0.5rem)', color: '#6E520F', letterSpacing: '0.18em', textTransform: 'uppercase', marginTop: '2px' }}
-            >
-              {t.nav.tagline}
+              MCA
             </div>
           </div>
         </a>
