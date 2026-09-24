@@ -132,9 +132,9 @@ const en = {
       'From first deposit to final delivery, every step is clear, fair, and built around your peace of mind.',
     stepLabel: 'Step',
     steps: [
-      { title: '50% Advance Deposit', desc: 'We confirm your selected service with a simple 50% advance — securing your slot and our full commitment to your project.' },
+      { title: '20-30% Advance Deposit', desc: 'We confirm your selected service with a simple 20-30% advance — securing your slot and our full commitment to your project.' },
       { title: 'Gather & Prepare', desc: 'We collect and organize every asset, detail, and requirement needed to bring your vision to life with precision.' },
-      { title: 'Deliver & Finalize', desc: 'We deliver your project on time, you review the finished work, and settle the remaining 50% — no surprises.' },
+      { title: 'Deliver & Finalize', desc: 'We deliver your project on time, you review the finished work, and settle the remaining balance — no surprises.' },
     ],
     ctaText: 'Ready to begin your project?',
     ctaButton: 'Start Your Project',
@@ -324,9 +324,9 @@ const es: Translation = {
       'Desde el primer depósito hasta la entrega final, cada paso es claro, justo y pensado para tu tranquilidad.',
     stepLabel: 'Paso',
     steps: [
-      { title: '50% de Anticipo', desc: 'Confirmamos el servicio seleccionado con un simple anticipo del 50%, asegurando tu lugar y nuestro compromiso total con tu proyecto.' },
+      { title: '20-30% de Anticipo', desc: 'Confirmamos el servicio seleccionado con un simple anticipo del 20-30%, asegurando tu lugar y nuestro compromiso total con tu proyecto.' },
       { title: 'Reunir y Preparar', desc: 'Recopilamos y organizamos cada recurso, detalle y requisito necesario para dar vida a tu visión con precisión.' },
-      { title: 'Entregar y Finalizar', desc: 'Entregamos tu proyecto a tiempo, revisas el trabajo terminado y liquidas el 50% restante, sin sorpresas.' },
+      { title: 'Entregar y Finalizar', desc: 'Entregamos tu proyecto a tiempo, revisas el trabajo terminado y liquidas el saldo restante, sin sorpresas.' },
     ],
     ctaText: '¿Listo para empezar tu proyecto?',
     ctaButton: 'Inicia Tu Proyecto',
