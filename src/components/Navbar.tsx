@@ -6,16 +6,17 @@ import { useI18n } from '../i18n';
 
 export default function Navbar() {
   const { t } = useI18n();
+  const currentPath = window.location.pathname.replace(/\/$/, '') || '/';
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
 
   const navLinks = [
-    { label: t.nav.about, href: '#about' },
-    { label: t.nav.services, href: '#services' },
-    { label: t.nav.work, href: '#work' },
-    { label: t.nav.team, href: '#team' },
-    { label: t.nav.process, href: '#process' },
-    { label: t.nav.contact, href: '#contact' },
+    { label: t.nav.about, href: '/about' },
+    { label: t.nav.services, href: '/services' },
+    { label: t.nav.work, href: '/work' },
+    { label: t.nav.team, href: '/team' },
+    { label: t.nav.process, href: '/services#process' },
+    { label: t.nav.contact, href: '/contact' },
   ];
 
   useEffect(() => {
@@ -38,7 +39,7 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-14 py-3.5 sm:py-4 flex items-center justify-between gap-2 sm:gap-3">
 
         {/* Logo */}
-        <a href="#" className="flex items-center gap-2 sm:gap-3 min-w-0" style={{ textDecoration: 'none' }}>
+        <a href="/" className="flex items-center gap-2 sm:gap-3 min-w-0" style={{ textDecoration: 'none' }}>
           <img
             src="/assets/images/download.png"
             alt="MCA"
@@ -58,7 +59,7 @@ export default function Navbar() {
         {/* Desktop nav */}
         <nav className="hidden md:flex items-center gap-7 lg:gap-9">
           {navLinks.map((l) => (
-            <a key={l.href} href={l.href} className="nav-link">{l.label}</a>
+            <a key={l.href} href={l.href} className="nav-link" aria-current={currentPath === l.href.split('#')[0] ? 'page' : undefined}>{l.label}</a>
           ))}
         </nav>
 
@@ -68,7 +69,7 @@ export default function Navbar() {
 
           <Magnetic strength={0.5}>
             <a
-              href="#contact"
+              href="/contact"
               className="btn-gold rounded-full whitespace-nowrap px-3 py-1.5 sm:px-5 sm:py-2.5"
               style={{ fontSize: 'clamp(0.48rem, 1.7vw, 0.62rem)', letterSpacing: '0.1em' }}
             >
@@ -111,7 +112,7 @@ export default function Navbar() {
             <LanguageToggle />
           </div>
           <a
-            href="#contact"
+            href="/contact"
             className="btn-gold rounded-full py-3 text-center mt-1"
             style={{ fontSize: '0.65rem' }}
             onClick={() => setMenuOpen(false)}

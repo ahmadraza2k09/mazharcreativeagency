@@ -7,6 +7,8 @@ const MEMBER_META = [
   { name: 'Abdul Hanan', primary: true, initial: 'AH', photo: '/assets/images/team/hanan.jpg' },
   { name: 'Faizan Ali', primary: false, initial: 'FA', photo: '/assets/images/team/faizan.jpg' },
   { name: 'Ahmad Raza', primary: false, initial: 'AR', photo: '/assets/images/team/ahmad.jpg' },
+  { name: 'Muneeb Ahmad', primary: false, initial: 'MA', photo: '' },
+  { name: 'Muzzamil Imtiazz', primary: false, initial: 'MI', photo: '' },
 ];
 
 function Avatar({ photo, initial, primary, hovered, photoLabel }: {
