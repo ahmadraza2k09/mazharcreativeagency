@@ -29,6 +29,27 @@ const PROJECT_META = [
     url: 'mbeautytx.com',
     href: 'https://www.mbeautytx.com/',
   },
+  {
+    index: '04',
+    title: 'Sindy Martinez Beauty Studio',
+    image: '/assets/images/portfolio/sindy-martinez.png',
+    url: 'sindymartinezbeautystudio.vercel.app',
+    href: 'https://sindymartinezbeautystudio.vercel.app/',
+  },
+  {
+    index: '05',
+    title: 'Kloe Beauty Salon',
+    image: '/assets/images/portfolio/kloe-beauty.png',
+    url: 'kloebeauty.vercel.app',
+    href: 'https://kloebeauty.vercel.app/',
+  },
+  {
+    index: '06',
+    title: 'Boulevard Hair Salon',
+    image: '/assets/images/portfolio/boulevard-salon.png',
+    url: 'boulevardsalon.vercel.app',
+    href: 'https://boulevardsalon.vercel.app/',
+  },
 ];
 
 function ProjectCard({ index, title, category, desc, image, url, href, reveal }: {
@@ -46,7 +67,9 @@ function ProjectCard({ index, title, category, desc, image, url, href, reveal }:
           onPointerEnter={() => setHovered(true)}
           onPointerLeave={() => setHovered(false)}
           style={{
-            display: 'block',
+            display: 'flex',
+            flexDirection: 'column',
+            justifyContent: 'space-between',
             textDecoration: 'none',
             height: '100%',
             borderRadius: '20px',
@@ -62,27 +85,40 @@ function ProjectCard({ index, title, category, desc, image, url, href, reveal }:
         >
           <div style={{ position: 'absolute', top: 0, left: '8%', right: '8%', height: '1px', background: hovered ? 'linear-gradient(90deg, transparent, rgba(240,217,140,0.8), transparent)' : 'linear-gradient(90deg, transparent, rgba(212,175,55,0.25), transparent)', zIndex: 3, transition: 'all 0.5s ease' }} />
 
-          {/* Browser chrome */}
-          <div className="browser-chrome" style={{ padding: '11px 16px', display: 'flex', alignItems: 'center', gap: '10px' }}>
-            <div style={{ display: 'flex', gap: '6px', flexShrink: 0 }}>
-              {['#ff5f56', '#ffbd2e', '#27c93f'].map((c, i) => (
-                <div key={i} style={{ width: '11px', height: '11px', borderRadius: '50%', background: c, opacity: 0.85 }} />
-              ))}
+          <div>
+            {/* Browser chrome */}
+            <div className="browser-chrome" style={{ padding: '11px 16px', display: 'flex', alignItems: 'center', gap: '10px' }}>
+              <div style={{ display: 'flex', gap: '6px', flexShrink: 0 }}>
+                {['#ff5f56', '#ffbd2e', '#27c93f'].map((c, i) => (
+                  <div key={i} style={{ width: '11px', height: '11px', borderRadius: '50%', background: c, opacity: 0.85 }} />
+                ))}
+              </div>
+              <div style={{ flex: 1, height: '24px', borderRadius: '12px', background: 'rgba(28,26,22,0.05)', border: '1px solid rgba(212,175,55,0.1)', display: 'flex', alignItems: 'center', gap: '7px', padding: '0 10px' }}>
+                <div style={{ width: '6px', height: '6px', borderRadius: '50%', background: 'rgba(39,201,63,0.8)', flexShrink: 0 }} />
+                <span className="font-label" style={{ fontSize: '0.58rem', color: 'rgba(28,26,22,0.4)', letterSpacing: '0.03em', overflow: 'hidden', whiteSpace: 'nowrap', textOverflow: 'ellipsis' }}>{url}</span>
+              </div>
+              <ExternalLink size={12} strokeWidth={1.5} style={{ color: 'rgba(212,175,55,0.4)', flexShrink: 0 }} />
             </div>
-            <div style={{ flex: 1, height: '24px', borderRadius: '12px', background: 'rgba(28,26,22,0.05)', border: '1px solid rgba(212,175,55,0.1)', display: 'flex', alignItems: 'center', gap: '7px', padding: '0 10px' }}>
-              <div style={{ width: '6px', height: '6px', borderRadius: '50%', background: 'rgba(39,201,63,0.8)', flexShrink: 0 }} />
-              <span className="font-label" style={{ fontSize: '0.58rem', color: 'rgba(28,26,22,0.4)', letterSpacing: '0.03em', overflow: 'hidden', whiteSpace: 'nowrap', textOverflow: 'ellipsis' }}>{url}</span>
-            </div>
-            <ExternalLink size={12} strokeWidth={1.5} style={{ color: 'rgba(212,175,55,0.4)', flexShrink: 0 }} />
-          </div>
 
-          {/* Screenshot — box hugs the image so there is never empty space */}
-          <div className="project-img-wrap">
-            <img src={image} alt={`${title} — ${category}`} style={{ width: '100%', height: 'auto', display: 'block', transform: hovered ? 'scale(1.03)' : 'scale(1)', transition: 'transform 0.7s cubic-bezier(0.16,1,0.3,1)', transformOrigin: 'top center' }} />
+            {/* Screenshot — box hugs the image so there is never empty space or aspect ratio distortion */}
+            <div className="project-img-wrap" style={{ overflow: 'hidden', position: 'relative', width: '100%', background: '#f0ece4' }}>
+              <img
+                src={image}
+                alt={`${title} — ${category}`}
+                style={{
+                  width: '100%',
+                  height: 'auto',
+                  display: 'block',
+                  transform: hovered ? 'scale(1.03)' : 'scale(1)',
+                  transition: 'transform 0.7s cubic-bezier(0.16,1,0.3,1)',
+                  transformOrigin: 'top center',
+                }}
+              />
+            </div>
           </div>
 
           {/* Info bar */}
-          <div style={{ padding: '22px 24px', display: 'flex', alignItems: 'flex-start', justifyContent: 'space-between', gap: '12px', background: 'linear-gradient(135deg, #ffffff, #f7f1e6)', borderTop: '1px solid rgba(212,175,55,0.1)' }}>
+          <div style={{ padding: '22px 24px', display: 'flex', alignItems: 'flex-start', justifyContent: 'space-between', gap: '12px', background: 'linear-gradient(135deg, #ffffff, #f7f1e6)', borderTop: '1px solid rgba(212,175,55,0.1)', marginTop: 'auto' }}>
             <div style={{ flex: 1 }}>
               <div className="font-label" style={{ fontSize: '0.6rem', letterSpacing: '0.25em', color: 'rgba(184,144,31,0.85)', marginBottom: '6px' }}>{index} — {category}</div>
               <h3 className="font-display font-semibold" style={{ fontSize: '1.4rem', color: '#1c1a16', lineHeight: 1.2, marginBottom: '8px' }}>{title}</h3>
@@ -132,7 +168,7 @@ export default function Portfolio() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7 items-start">
           {projects.map((p, i) => (
-            <ProjectCard key={p.title} {...p} reveal={REVEALS[i] ?? 'up'} />
+            <ProjectCard key={p.title} {...p} reveal={REVEALS[i % REVEALS.length]} />
           ))}
         </div>
 
