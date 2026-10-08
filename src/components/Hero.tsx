@@ -148,7 +148,7 @@ export default function Hero() {
             </a>
           </Magnetic>
           <Magnetic strength={0.3} className="pointer-events-auto w-full sm:w-auto">
-            <a href="/work" className="btn-outline rounded-full px-8 py-4 gap-2 w-full sm:w-auto">
+            <a href="#work" className="btn-outline rounded-full px-8 py-4 gap-2 w-full sm:w-auto">
               {t.hero.ctaSecondary}
               <ArrowUpRight size={14} strokeWidth={2} />
             </a>

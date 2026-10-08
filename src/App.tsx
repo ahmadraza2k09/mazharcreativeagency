@@ -12,42 +12,29 @@ import Footer from './components/Footer';
 import WhatsAppButton from './components/WhatsAppButton';
 import Marquee from './components/Marquee';
 
-function HomePage() {
-  return <><Hero /><Marquee /></>;
-}
-
-function AboutPage() {
-  return <><About /><Clients /></>;
-}
-
-function ServicesPage() {
-  return <><Services /><WhyChooseUs /><Process /></>;
-}
-
-function WorkPage() {
-  return <><Portfolio /><Clients /></>;
-}
-
-function TeamPage() {
-  return <Team />;
-}
-
-function ContactPage() {
-  return <Contact />;
-}
-
 export default function App() {
-  const path = window.location.pathname.replace(/\/$/, '') || '/';
-  const page = path === '/about' ? <AboutPage />
-    : path === '/services' ? <ServicesPage />
-      : path === '/work' ? <WorkPage />
-        : path === '/team' ? <TeamPage />
-          : path === '/contact' ? <ContactPage />
-            : <HomePage />;
   return (
-    <div style={{ background: '#ffffff', minHeight: '100vh', overflowX: 'hidden', position: 'relative' }}>
+    <div
+      style={{
+        background: '#ffffff',
+        minHeight: '100vh',
+        overflowX: 'hidden',
+        position: 'relative',
+      }}
+    >
       <Navbar />
-      <main>{page}</main>
+      <main>
+        <Hero />
+        <Marquee />
+        <About />
+        <Services />
+        <Portfolio />
+        <Clients />
+        <Team />
+        <WhyChooseUs />
+        <Process />
+        <Contact />
+      </main>
       <Footer />
       <WhatsAppButton />
     </div>

@@ -107,8 +107,6 @@ const en = {
       { role: 'Founder & CEO', bio: 'Visionary leader with 6+ years driving creative excellence and strategic growth for clients worldwide.' },
       { role: 'Developer', bio: 'Full-stack developer crafting powerful, performant digital experiences from code to deployment.' },
       { role: 'Graphics & UI/UX Designer', bio: 'Creative designer specializing in intuitive interfaces and stunning visual identities.' },
-      { role: 'Graphic Designer', bio: 'Graphic designer creating clear, memorable visuals that bring ideas and brands to life.' },
-      { role: 'Graphic Designer', bio: 'Graphic designer focused on distinctive visual concepts and polished brand communication.' },
     ],
   },
   why: {
@@ -301,8 +299,6 @@ const es: Translation = {
       { role: 'Fundador y CEO', bio: 'Líder visionario con más de 6 años impulsando la excelencia creativa y el crecimiento estratégico de clientes en todo el mundo.' },
       { role: 'Desarrollador', bio: 'Desarrollador full-stack que crea experiencias digitales potentes y de alto rendimiento, del código al despliegue.' },
       { role: 'Diseñador Gráfico y UI/UX', bio: 'Diseñador creativo especializado en interfaces intuitivas e identidades visuales impactantes.' },
-      { role: 'Diseñador Gráfico', bio: 'Diseñador gráfico que crea visuales claros y memorables para dar vida a ideas y marcas.' },
-      { role: 'Diseñador Gráfico', bio: 'Diseñador gráfico enfocado en conceptos visuales distintivos y comunicación de marca cuidada.' },
     ],
   },
   why: {

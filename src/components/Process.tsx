@@ -171,7 +171,7 @@ export default function Process() {
               {t.process.ctaText}
             </span>
             <Magnetic strength={0.4}>
-              <a href="/contact" className="btn-gold rounded-full inline-flex items-center gap-2" style={{ padding: '13px 28px', fontSize: '0.66rem' }}>
+              <a href="#contact" className="btn-gold rounded-full inline-flex items-center gap-2" style={{ padding: '13px 28px', fontSize: '0.66rem' }}>
                 {t.process.ctaButton}
                 <ArrowRight size={15} strokeWidth={2} />
               </a>

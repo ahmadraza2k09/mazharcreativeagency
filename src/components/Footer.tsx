@@ -5,11 +5,11 @@ import { WHATSAPP_LINK, EMAIL_LINK, INSTAGRAM_LINK } from '../lib/contact';
 export default function Footer() {
   const { t } = useI18n();
   const quick = [
-    { label: t.nav.about, href: '/about' },
-    { label: t.nav.services, href: '/services' },
-    { label: t.nav.work, href: '/work' },
-    { label: t.nav.team, href: '/team' },
-    { label: t.nav.contact, href: '/contact' },
+    { label: t.nav.about, href: '#about' },
+    { label: t.nav.services, href: '#services' },
+    { label: t.nav.work, href: '#work' },
+    { label: t.nav.team, href: '#team' },
+    { label: t.nav.contact, href: '#contact' },
   ];
   return (
     <footer style={{ background: 'linear-gradient(180deg, #0d0d0f 0%, #050505 100%)', borderTop: '1px solid rgba(212,175,55,0.28)', position: 'relative', overflow: 'hidden' }}>
@@ -72,7 +72,7 @@ export default function Footer() {
             <div className="font-label font-semibold mb-6" style={{ fontSize: '0.6rem', letterSpacing: '0.28em', textTransform: 'uppercase', color: '#E6C879' }}>{t.footer.servicesTitle}</div>
             <div className="flex flex-col gap-3">
               {t.footer.serviceList.map((s) => (
-                <a key={s} href="/services" className="font-body" style={{ fontSize: '0.875rem', color: 'rgba(246,241,231,0.48)', textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '8px', transition: 'color 0.3s ease' }}
+                <a key={s} href="#services" className="font-body" style={{ fontSize: '0.875rem', color: 'rgba(246,241,231,0.48)', textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '8px', transition: 'color 0.3s ease' }}
                   onPointerEnter={(e) => { (e.currentTarget as HTMLElement).style.color = '#E6C879'; }}
                   onPointerLeave={(e) => { (e.currentTarget as HTMLElement).style.color = 'rgba(246,241,231,0.48)'; }}
                 >
