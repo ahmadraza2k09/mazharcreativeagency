@@ -110,6 +110,12 @@ const en = {
       { role: 'Founder & CEO', bio: 'Visionary leader with 6+ years driving creative excellence and strategic growth for clients worldwide.' },
       { role: 'Developer', bio: 'Full-stack developer crafting powerful, performant digital experiences from code to deployment.' },
       { role: 'Graphics & UI/UX Designer', bio: 'Creative designer specializing in intuitive interfaces and stunning visual identities.' },
+      { role: 'Website Developer', bio: 'Bespoke web developer building high-performance, conversion-focused websites with clean code and interactive finesse.' },
+      { role: 'Software Engineer', bio: 'Software engineer architecting scalable digital platforms, high-throughput systems, and dependable technical infrastructure.' },
+      { role: 'AI Agents Developer', bio: 'AI engineer developing intelligent autonomous agents, workflow automations, and modern machine-learning integrations.' },
+      { role: 'Brand Identity Designer', bio: 'Brand strategist and designer crafting memorable visual languages, bespoke typography, and elevated brand identities.' },
+      { role: 'Graphic & Presentation Designer', bio: 'Presentation specialist and graphic designer crafting high-impact marketing assets and compelling investor decks.' },
+      { role: 'UI / UX Designer', bio: 'UI/UX designer crafting intuitive, human-centered digital experiences and refined design systems from wireframe to launch.' },
     ],
   },
   why: {
@@ -195,9 +201,6 @@ const en = {
     serviceList: ['Website Design', 'Graphic Design', 'Brand Identity', 'Social Media Templates', 'App Development', 'Ads Management'],
     rights: 'All rights reserved.',
     tagline: 'Crafting visuals that make brands unforgettable',
-  },
-  whatsapp: {
-    tooltip: 'Chat on WhatsApp',
   },
 };
 
@@ -305,6 +308,12 @@ const es: Translation = {
       { role: 'Fundador y CEO', bio: 'Líder visionario con más de 6 años impulsando la excelencia creativa y el crecimiento estratégico de clientes en todo el mundo.' },
       { role: 'Desarrollador', bio: 'Desarrollador full-stack que crea experiencias digitales potentes y de alto rendimiento, del código al despliegue.' },
       { role: 'Diseñador Gráfico y UI/UX', bio: 'Diseñador creativo especializado en interfaces intuitivas e identidades visuales impactantes.' },
+      { role: 'Desarrollador Web', bio: 'Desarrollador web que crea sitios de alto rendimiento y conversión con código limpio y fineza interactiva.' },
+      { role: 'Ingeniero de Software', bio: 'Ingeniero de software que diseña plataformas digitales escalables, sistemas de alto rendimiento e infraestructura técnica confiable.' },
+      { role: 'Desarrollador de Agentes IA', bio: 'Ingeniero de IA que desarrolla agentes autónomos inteligentes, automatizaciones de procesos e integraciones de aprendizaje automático.' },
+      { role: 'Diseñadora de Identidad de Marca', bio: 'Estratega y diseñadora de marca que crea lenguajes visuales memorables, tipografía personalizada e identidades distintivas.' },
+      { role: 'Diseñador Gráfico y de Presentaciones', bio: 'Especialista en presentaciones y diseño gráfico que crea recursos de marketing de alto impacto y presentaciones persuasivas.' },
+      { role: 'Diseñadora UI / UX', bio: 'Diseñadora UI/UX que crea experiencias digitales intuitivas centradas en el usuario y sistemas de diseño refinados del prototipo al lanzamiento.' },
     ],
   },
   why: {
@@ -390,9 +399,6 @@ const es: Translation = {
     serviceList: ['Diseño Web', 'Diseño Gráfico', 'Identidad de Marca', 'Plantillas para Redes', 'Desarrollo de Apps', 'Gestión de Anuncios'],
     rights: 'Todos los derechos reservados.',
     tagline: 'Creamos visuales que hacen inolvidables a las marcas',
-  },
-  whatsapp: {
-    tooltip: 'Chatea por WhatsApp',
   },
 };
 

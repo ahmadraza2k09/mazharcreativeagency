@@ -4,13 +4,19 @@ import Tilt3D from './effects/Tilt3D';
 import { useI18n } from '../i18n';
 
 const MEMBER_META = [
-  { name: 'Abdul Hanan', primary: true, initial: 'AH', photo: '/assets/images/team/hanan.jpg' },
-  { name: 'Faizan Ali', primary: false, initial: 'FA', photo: '/assets/images/team/faizan.jpg' },
-  { name: 'Ahmad Raza', primary: false, initial: 'AR', photo: '/assets/images/team/ahmad.jpg' },
+  { name: 'Abdul Hanan', primary: true, initial: 'AH', photo: '/assets/images/team/hanan.jpg', objectPosition: 'center top' },
+  { name: 'Faizan Ali', primary: false, initial: 'FA', photo: '/assets/images/team/faizan.jpg', objectPosition: 'center top' },
+  { name: 'Ahmad Raza', primary: false, initial: 'AR', photo: '/assets/images/team/ahmad.jpg', objectPosition: 'center top' },
+  { name: 'Ethan Franklin', primary: false, initial: 'EF', photo: '/assets/images/team/ethan.jpg', objectPosition: 'center' },
+  { name: 'David (A) Vargas', primary: false, initial: 'DV', photo: '/assets/images/team/david.jpg', objectPosition: 'center' },
+  { name: 'Ejaz Awan', primary: false, initial: 'EA', photo: '/assets/images/team/ejaz.jpg', objectPosition: 'center' },
+  { name: 'Dua Javed', primary: false, initial: 'DJ', photo: '/assets/images/team/dua.jpg', objectPosition: 'center' },
+  { name: 'CH Hamza', primary: false, initial: 'CH', photo: '/assets/images/team/hamza.jpg', objectPosition: 'center' },
+  { name: 'Ayesha', primary: false, initial: 'AY', photo: '/assets/images/team/ayesha.jpg', objectPosition: 'center' },
 ];
 
-function Avatar({ photo, initial, primary, hovered, photoLabel }: {
-  photo: string; initial: string; primary: boolean; hovered: boolean; photoLabel: string;
+function Avatar({ photo, initial, primary, hovered, photoLabel, objectPosition = 'center' }: {
+  photo: string; initial: string; primary: boolean; hovered: boolean; photoLabel: string; objectPosition?: string;
 }) {
   const [imgError, setImgError] = useState(false);
   const size = primary ? 100 : 88;
@@ -32,7 +38,7 @@ function Avatar({ photo, initial, primary, hovered, photoLabel }: {
               alt=""
               onError={() => setImgError(true)}
               loading="lazy"
-              style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center top', display: 'block' }}
+              style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition, display: 'block' }}
             />
           ) : (
             <>
@@ -46,13 +52,13 @@ function Avatar({ photo, initial, primary, hovered, photoLabel }: {
   );
 }
 
-function TeamCard({ name, role, bio, primary, initial, photo, index, photoLabel, brandLabel }: {
-  name: string; role: string; bio: string; primary: boolean; initial: string; photo: string; index: number; photoLabel: string; brandLabel: string;
+function TeamCard({ name, role, bio, primary, initial, photo, objectPosition, index, photoLabel, brandLabel }: {
+  name: string; role: string; bio: string; primary: boolean; initial: string; photo: string; objectPosition?: string; index: number; photoLabel: string; brandLabel: string;
 }) {
   const [hovered, setHovered] = useState(false);
 
   return (
-    <Reveal delay={index * 0.12} className="h-full">
+    <Reveal delay={(index % 3) * 0.12} className="h-full">
       <Tilt3D max={12} className="h-full">
         <div
           onPointerEnter={() => setHovered(true)}
@@ -71,7 +77,7 @@ function TeamCard({ name, role, bio, primary, initial, photo, index, photoLabel,
           }}
         >
           <div className="flex flex-col items-center text-center" style={{ position: 'relative', zIndex: 1, transform: 'translateZ(30px)' }}>
-            <Avatar photo={photo} initial={initial} primary={primary} hovered={hovered} photoLabel={photoLabel} />
+            <Avatar photo={photo} initial={initial} primary={primary} hovered={hovered} photoLabel={photoLabel} objectPosition={objectPosition} />
 
             <h3 className="font-display font-semibold" style={{ fontSize: primary ? '1.5rem' : '1.2rem', color: '#1c1a16', marginBottom: '8px' }}>{name}</h3>
 

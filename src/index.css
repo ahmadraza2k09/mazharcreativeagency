@@ -481,9 +481,6 @@ h1, h2, h3, h4 {
   opacity: 0.025; pointer-events: none; z-index: 0; mix-blend-mode: multiply;
 }
 
-/* ── WhatsApp pulse ── */
-@keyframes waPulse { 0% { transform: scale(1); opacity: 1; } 100% { transform: scale(1.7); opacity: 0; } }
-
 /* ── Spline loader spinner ── */
 .loader {
   width: 38px;

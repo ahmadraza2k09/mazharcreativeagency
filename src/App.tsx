@@ -9,7 +9,6 @@ import WhyChooseUs from './components/WhyChooseUs';
 import Process from './components/Process';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
-import WhatsAppButton from './components/WhatsAppButton';
 import Marquee from './components/Marquee';
 
 export default function App() {
@@ -36,7 +35,6 @@ export default function App() {
         <Contact />
       </main>
       <Footer />
-      <WhatsAppButton />
     </div>
   );
 }
