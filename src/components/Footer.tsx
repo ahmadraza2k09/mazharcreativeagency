@@ -1,6 +1,6 @@
-import { Instagram, MessageCircle, Mail } from 'lucide-react';
+import { Instagram, Mail } from 'lucide-react';
 import { useI18n } from '../i18n';
-import { WHATSAPP_LINK, EMAIL_LINK, INSTAGRAM_LINK } from '../lib/contact';
+import { EMAIL_LINK, INSTAGRAM_LINK } from '../lib/contact';
 
 export default function Footer() {
   const { t } = useI18n();
@@ -37,7 +37,6 @@ export default function Footer() {
             <div className="flex items-center gap-3">
               {[
                 { href: INSTAGRAM_LINK, icon: Instagram, color: '#E6C879', bg: 'rgba(212,175,55,0.12)', border: 'rgba(212,175,55,0.35)', label: 'Instagram' },
-                { href: WHATSAPP_LINK, icon: MessageCircle, color: '#25D366', bg: 'rgba(37,211,102,0.12)', border: 'rgba(37,211,102,0.35)', label: 'WhatsApp' },
                 { href: EMAIL_LINK, icon: Mail, color: '#E6C879', bg: 'rgba(212,175,55,0.12)', border: 'rgba(212,175,55,0.35)', label: 'Email' },
               ].map((s) => (
                 <a key={s.label} href={s.href} target="_blank" rel="noopener noreferrer" aria-label={s.label}

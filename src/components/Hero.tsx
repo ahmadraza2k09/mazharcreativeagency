@@ -4,7 +4,6 @@ import Magnetic from './effects/Magnetic';
 import { PixelCanvas } from '@/components/ui/pixel-canvas';
 import { useI18n } from '../i18n';
 import { useIsMobile, usePrefersReducedMotion } from '../lib/useMediaQuery';
-import { WHATSAPP_LINK } from '../lib/contact';
 
 // Gold-on-white pixel palette with a single ink accent for contrast.
 const PIXEL_COLORS = ['#E6C879', '#D4AF37', '#C9A227', '#B8901F', '#1C1A16'];
@@ -138,9 +137,7 @@ export default function Hero() {
         <div className="reveal-up reveal-delay-6 flex flex-col sm:flex-row sm:flex-wrap sm:justify-center items-center gap-4 sm:gap-5 mt-11 w-full">
           <Magnetic strength={0.4} className="pointer-events-auto w-full sm:w-auto">
             <a
-              href={WHATSAPP_LINK}
-              target="_blank"
-              rel="noopener noreferrer"
+              href="#contact"
               className="btn-gold rounded-full px-8 py-4 gap-2 w-full sm:w-auto"
             >
               {t.hero.ctaPrimary}
